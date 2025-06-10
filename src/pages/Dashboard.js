@@ -731,10 +731,10 @@ const Dashboard = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         {dashboardStats.map((stat, index) => (
-          <div
+           <div
             key={index}
-            className={`${stat.bgColor} text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer`}
-            onClick={() => (window.location.href = stat.path)}
+            className={`${stat.bgColor} text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${user.role === "admin" ? "cursor-pointer" : ""}`}
+            onClick={() => user.role === "admin" && (window.location.href = stat.path)}
           >
             <div className="flex justify-between items-center">
               <div>
