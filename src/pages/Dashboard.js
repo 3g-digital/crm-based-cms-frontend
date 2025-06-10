@@ -715,51 +715,17 @@ const Dashboard = () => {
           <p className="text-gray-600">Welcome back to your CRM dashboard</p>
         </div>
 
-        <div className="flex space-x-2">
-        <button
-        onClick={() => {
-          console.log("Button clicked");
-          setShowModal(true);
-        }}
-        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
-      >
-        Mark Update Available
-      </button>
-      
-      {/* Modal as a portal */}
-      {showModal && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg max-w-md w-full">
-            <div className="flex justify-between">
-              <h2 className="text-lg font-bold">Mark Update Available</h2>
-              <button onClick={() => setShowModal(false)}>✕</button>
-            </div>
-            <MarkUpdateForm />
-          </div>
-        </div>
-      )}
-
-          {/* Refresh button */}
-          <button
-            onClick={() => fetchFreshDashboardData()}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 flex items-center"
-            title="Refresh Dashboard Data"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
-            </svg>
-          </button>
-        </div>
+       
+      {/* Refresh button */}
+        <button 
+          onClick={() => fetchFreshDashboardData()}
+          className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-700 flex items-center"
+          title="Refresh Dashboard Data"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+        </button>
       </div>
 
       {/* Stats Grid */}
