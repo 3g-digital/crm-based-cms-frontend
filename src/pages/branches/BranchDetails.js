@@ -23,6 +23,7 @@ const BranchDetails = () => {
   const [selectedLeadId, setSelectedLeadId] = useState(null);
   const [selectedCustomerId, setSelectedCustomerId] = useState(null);
   // Add this to your state declarations
+  //New declarations
 const [technicianPerformance, setTechnicianPerformance] = useState([]);
 const [technicianTotals, setTechnicianTotals] = useState({
   assigned: 0,
